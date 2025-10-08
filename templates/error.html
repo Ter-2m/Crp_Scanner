@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Application Error{% endblock %}
+
+{% block content %}
+<div class="text-center py-12 rounded-lg bg-primary-dark/80 border border-secondary-neon/50 max-w-xl mx-auto">
+    <h2 class="text-4xl font-bold text-secondary-neon mb-4">🚨 Application Error 🚨</h2>
+    
+    <p class="text-xl text-text-light mb-6">
+        The scanner encountered a critical error.
+    </p>
+
+    <p class="text-base text-red-400 mb-8">
+        {{ error_message }}
+    </p>
+
+    <p class="text-text-light/80">
+        Please check the **Render Logs** for the detailed traceback.
+    </p>
+
+    <div class="mt-6">
+        <a href="/" class="inline-block px-6 py-2 bg-accent-blue text-text-light rounded hover:bg-accent-blue/80 transition duration-150">
+            Try Refreshing
+        </a>
+    </div>
+</div>
+{% endblock %}
